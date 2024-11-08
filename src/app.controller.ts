@@ -1,3 +1,4 @@
+/* The controller contains the logic to handle HTTP requests. Here, it will return a simple message. */
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
