@@ -7,8 +7,14 @@ export class AppController {
     constructor(private readonly appService: AppService) {
     }
 
+    /**
+     * This function returns a simple message in a JSON object.
+     */
     @Get()
-    getHello(): { message: string } {
-        return {message: this.appService.getHello()};
+    getHello(): { message: string, random_number: bigint } {
+        return {
+            message: this.appService.getHello(),
+            random_number: this.appService.getRandomNumber()
+        };
     }
 }

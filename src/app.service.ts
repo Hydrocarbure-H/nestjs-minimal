@@ -5,7 +5,17 @@ import {Injectable} from '@nestjs/common';
 
 @Injectable()
 export class AppService {
+    /**
+     * This function returns a simple message.
+     */
     getHello(): string {
-        return "Hello, World!"
+        return "Hello, World!";
+    }
+
+    /**
+     * This function returns a random number.
+     */
+    getRandomNumber(): bigint {
+        return BigInt(Math.floor(Math.random() * 100));
     }
 }
