@@ -1,7 +1,8 @@
 /* The service can contain business logic.
-Here, it returns a simple string, but it’s designed for more complex functions. */
+Here, it returns a simple string, but it’s designed for more complex functions.
+*/
 
-import {Injectable} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
@@ -15,7 +16,7 @@ export class AppService {
     /**
      * This function returns a random number.
      */
-    getRandomNumber(): bigint {
-        return BigInt(Math.floor(Math.random() * 100));
+    getRandomNumber(): number {
+        return Math.random();
     }
 }
